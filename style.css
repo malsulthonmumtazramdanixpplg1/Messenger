@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0f172a;
+    /* Tema Gelap */
+    color: #ffffff;
+    padding: 20px;
+}
+
+.card-container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 24px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.heart-icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.highlight {
+    color: #38bdf8;
+}
+
+.message-box {
+    margin: 20px 0 30px;
+    min-height: 80px;
+    color: #cbd5e1;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+/* Container Tombol Flexbox */
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    position: relative;
+    min-height: 50px;
+}
+
+/* Tombol Dasar */
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+/* Tombol Iya (Mau Banget!) */
+.btn-yes {
+    background: #38bdf8;
+    color: #0f172a;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+}
+
+.btn-yes:hover {
+    transform: scale(1.05);
+    background: #7dd3fc;
+}
+
+/* Tombol Tidak (Enggak Dulu) - Posisi relatif awal */
+.btn-no {
+    background: rgba(255, 255, 255, 0.1);
+    color: #f87171;
+    border: 1px solid rgba(248, 113, 113, 0.3);
+    position: relative;
+    /* Ganti dari absolute ke relative agar tidak bertumpuk di awal */
+}
+
+.btn-wa {
+    display: inline-block;
+    margin-top: 15px;
+    background: #22c55e;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.hidden {
+    display: none;
+}
